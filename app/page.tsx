@@ -548,9 +548,17 @@ function CardVisual() {
         className="group relative h-[18.5rem] w-full"
       >
         <div className="pointer-events-none absolute inset-0 rounded-[24px] bg-gradient-to-br from-amber-200/10 via-transparent to-transparent opacity-0 blur-xl transition duration-300 group-hover:opacity-100" />
+        <Image
+          src={cardImage}
+          alt="Bits Edition One credit card"
+          fill
+          priority
+          sizes="(min-width: 1024px) 44vw, 90vw"
+          className="object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.55)]"
+        />
         <motion.div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 z-10"
           style={{
             WebkitMaskImage: `url(${cardImage.src})`,
             maskImage: `url(${cardImage.src})`,
@@ -568,14 +576,6 @@ function CardVisual() {
             transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 1.2 }}
           />
         </motion.div>
-        <Image
-          src={cardImage}
-          alt="Bits Edition One credit card"
-          fill
-          priority
-          sizes="(min-width: 1024px) 44vw, 90vw"
-          className="object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.55)]"
-        />
       </motion.div>
     </motion.div>
   );
