@@ -118,7 +118,7 @@ export default function Home() {
     if (!email.trim()) return;
     setSubmitted(true);
   };
-
+//test
   const handleCopy = async () => {
     if (typeof navigator === "undefined") return;
     try {
