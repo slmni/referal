@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-ink text-zinc-100;
+    font-feature-settings: "kern", "liga";
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 border border-white/10 backdrop-blur-xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 30px rgba(215, 179, 123, 0.25);
+  }
+
+  .ring-fade {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 20px 50px rgba(0, 0, 0, 0.55);
+  }
+
+  .text-shine {
+    background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.3), #f0d29a 35%, #f6e1b8 55%, rgba(255, 255, 255, 0.35));
+    background-size: 200% 100%;
+    color: transparent;
+    animation: text-shine 6s linear infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+@keyframes text-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
